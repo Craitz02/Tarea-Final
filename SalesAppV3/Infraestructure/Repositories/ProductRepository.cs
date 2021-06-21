@@ -27,7 +27,6 @@ namespace Infraestructure.Data
 
         public int Update(Product t)
         {
-
             return 0;
         }
 

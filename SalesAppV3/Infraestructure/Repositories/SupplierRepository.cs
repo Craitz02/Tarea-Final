@@ -1,5 +1,6 @@
 ﻿using Core;
 using Core.Poco;
+using Infraestructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,24 +8,24 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infraestructure.Data
+namespace Infraestructure.Repositories
 {
-    public class ClientRepository : IClientRepository
+    public class SupplierRepository : ISupplierRepository
     {
         private RAFContext context;
-        private readonly int SIZE = 228;
+        private readonly int SIZE = 388;
 
-        public ClientRepository()
+        public SupplierRepository()
         {
-            context = new RAFContext("Client",SIZE);
+            context = new RAFContext("Supplier", SIZE);
         }
 
-        public void Create(Client t)
+        public void Create(Supplier t)
         {
-            context.Create<Client>(t);
+            context.Create<Supplier>(t);
         }
 
-        public bool Delete(Client t)
+        public bool Delete(Supplier t)
         {
             if (context.Get<Product>(t.Id) == null)
             {
@@ -33,17 +34,17 @@ namespace Infraestructure.Data
             return context.Delete(t.Id);
         }
 
-        public IEnumerable<Client> Find(Expression<Func<Client, bool>> where)
+        public IEnumerable<Supplier> Find(Expression<Func<Supplier, bool>> where)
         {
             return context.Find(where);
         }
 
-        public IEnumerable<Client> GetAll()
+        public IEnumerable<Supplier> GetAll()
         {
-            return context.GetAll<Client>();
+            return context.GetAll<Supplier>();
         }
 
-        public int Update(Client t)
+        public int Update(Supplier t)
         {
             return 0;
         }

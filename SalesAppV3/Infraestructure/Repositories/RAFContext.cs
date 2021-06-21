@@ -341,5 +341,11 @@ namespace Infraestructure.Data
                 }
             }
         }
+
+        public bool Delete<T>(T t)
+        {
+
+            return false;
+        }
     }
 }
