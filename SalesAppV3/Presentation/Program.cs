@@ -20,8 +20,7 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IClientRepository clientRepository = new ClientRepository();
-            Application.Run(new Form1(clientRepository));
+            Application.Run(new Mdi());
         }
 
         static IHostBuilder CreateHostBuilder(string[] args) =>

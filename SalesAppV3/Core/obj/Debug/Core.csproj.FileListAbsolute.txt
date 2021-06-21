@@ -40,3 +40,21 @@ C:\Users\Sistemas-13\source\repos\SalesApp\Core\bin\Debug\Microsoft.Extensions.D
 C:\Users\Sistemas-13\source\repos\SalesApp\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Sistemas-13\source\repos\SalesApp\Core\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Sistemas-13\source\repos\SalesApp\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Core.exe.config
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Core.exe
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Core.pdb
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csprojAssemblyReference.cache
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.exe
+C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.pdb
