@@ -28,11 +28,11 @@ namespace Infraestructure.Repositories
 
         public bool Delete(Supplier t)
         {
-            if (context.Get<Product>(t.Id) == null)
+            if (context.Get<Supplier>(t.Id) == null)
             {
                 throw new ArgumentException($"Supplier with Id {t.Id} does not exists.");
             }
-            return context.Delete<Product>(t.Id);
+            return context.Delete<Supplier>(t.Id);
         }
 
         public IEnumerable<Supplier> Find(Expression<Func<Supplier, bool>> where)
@@ -41,15 +41,8 @@ namespace Infraestructure.Repositories
         }
 
         public IEnumerable<Supplier> GetAll()
-        {
-            if (Added)
-            {
-                return context.GetAll<Supplier>();
-            }
-            else
-            {
-                return null;
-            }
+        {   
+            return context.GetAll<Supplier>();
         }
 
         public int Update(Supplier t)

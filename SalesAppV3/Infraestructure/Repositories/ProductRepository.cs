@@ -42,14 +42,8 @@ namespace Infraestructure.Data
 
         public IEnumerable<Product> GetAll()
         {
-            if (Added)
-            {
-                return context.GetAll<Product>();
-            }
-            else
-            {
-                return null;
-            }
+            
+            return context.GetAll<Product>();
             
         }
 

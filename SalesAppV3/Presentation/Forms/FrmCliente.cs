@@ -50,7 +50,8 @@ namespace Presentation.Forms
                     cToUpdate.Email = Email;
                     cToUpdate.Phone = Telefono;
                     CRepo.Update(cToUpdate);
-                    MessageBox.Show("Producto actualizado satisfactoriamente");
+                    toUpdate = false;
+                    MessageBox.Show("Cliente actualizado satisfactoriamente");
                 }
                 else
                 {
@@ -131,17 +132,7 @@ namespace Presentation.Forms
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-            if (CRepo.GetAll() == null)
-            {
-                return;
-            }
-            else
-            {
-                reloadTable(Clientes);
-                CRepo.Added = true;
-
-                DgvClientes.DataSource = CRepo.GetAll().ToList();
-            }
+            reloadTable(Clientes);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -153,11 +144,6 @@ namespace Presentation.Forms
             }
             Client C = (Client)DgvClientes.CurrentRow.DataBoundItem;
             CRepo.Delete(C);
-            Clientes.Remove(C);
-            if (Clientes.Count == 0)
-            {
-                CRepo.Added = false;
-            }
 
             reloadTable(Clientes);
         }

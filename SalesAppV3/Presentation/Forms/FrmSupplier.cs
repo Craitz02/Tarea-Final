@@ -51,6 +51,7 @@ namespace Presentation.Forms
                     sToUpdate.Email = Email;
                     sToUpdate.Phone = Telefono;
                     SRepo.Update(sToUpdate);
+                    toUpdate = false;
                     MessageBox.Show("Producto actualizado satisfactoriamente");
                 }
                 else
@@ -131,17 +132,7 @@ namespace Presentation.Forms
 
         private void FrmSupplier_Load(object sender, EventArgs e)
         {
-            if (SRepo.GetAll() == null)
-            {
-                return;
-            }
-            else
-            {
-                reloadTable(Proveedores);
-                SRepo.Added = true;
-
-                DgvProveedores.DataSource = SRepo.GetAll().ToList();
-            }
+            reloadTable(Proveedores);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -153,11 +144,6 @@ namespace Presentation.Forms
             }
             Supplier S = (Supplier)DgvProveedores.CurrentRow.DataBoundItem;
             SRepo.Delete(S);
-            Proveedores.Remove(S);
-            if (Proveedores.Count == 0)
-            {
-                SRepo.Added = false;
-            }
 
             reloadTable(Proveedores);
         }

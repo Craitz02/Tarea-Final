@@ -67,6 +67,7 @@ namespace Presentation.Forms
                     pToUpdate.Price = Precio;
                     pToUpdate.Stock = Cantidad;
                     Prepo.Update(pToUpdate);
+                    toUpdate = false;
                     MessageBox.Show("Producto actualizado satisfactoriamente");
                 }
                 else
@@ -149,17 +150,7 @@ namespace Presentation.Forms
 
         private void FrmProducto_Load(object sender, EventArgs e)
         {
-            if (Prepo.GetAll() == null)
-            {
-                return;
-            }
-            else
-            {
-                reloadTable(Productos);
-                Prepo.Added = true;
-
-                DgvProductos.DataSource = Prepo.GetAll().ToList();
-            }
+            reloadTable(Productos);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -171,11 +162,6 @@ namespace Presentation.Forms
             }
             Product p = (Product)DgvProductos.CurrentRow.DataBoundItem;
             Prepo.Delete(p);
-            Productos.Remove(p);
-            if (Productos.Count == 0)
-            {
-                Prepo.Added = false;
-            }
 
             reloadTable(Productos);
         }

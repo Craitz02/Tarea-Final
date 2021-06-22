@@ -374,3 +374,5 @@ C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Presentation\obj\Debug
 C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Presentation\obj\Debug\Presentation.pdb
 C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Presentation\obj\Debug\Presentation.Forms.FrmCliente.resources
 C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Presentation\obj\Debug\Presentation.Forms.FrmSupplier.resources
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Presentation\obj\Debug\Presentation.Forms.FrmCliente.resources
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Presentation\obj\Debug\Presentation.Forms.FrmSupplier.resources

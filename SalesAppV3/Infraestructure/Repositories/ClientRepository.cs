@@ -27,11 +27,11 @@ namespace Infraestructure.Data
 
         public bool Delete(Client t)
         {
-            if (context.Get<Product>(t.Id) == null)
+            if (context.Get<Client>(t.Id) == null)
             {
                 throw new ArgumentException($"Supplier with Id {t.Id} does not exists.");
             }
-            return context.Delete<Product>(t.Id);
+            return context.Delete<Client>(t.Id);
         }
 
         public IEnumerable<Client> Find(Expression<Func<Client, bool>> where)
@@ -41,14 +41,7 @@ namespace Infraestructure.Data
 
         public IEnumerable<Client> GetAll()
         {
-            if (Added)
-            {
-                return context.GetAll<Client>();
-            }
-            else
-            {
-                return null;
-            }
+           return context.GetAll<Client>();
         }
 
         public int Update(Client t)
