@@ -23,9 +23,6 @@ namespace Presentation
             Application.Run(new Mdi());
         }
 
-        static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureServices((_, services) =>                    
-                   services.AddScoped<IClientRepository, ClientRepository>());
+        
     }
 }

@@ -135,7 +135,7 @@ namespace Infraestructure.Data
                 long posh = 8 + (id - 1) * 4;
                 //TODO Add Binary search to find the id
                 brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
-                int index = brHeader.ReadInt32();
+                int index = id;//brHeader.ReadInt32();
                 //TO-DO VALIDATE INDEX
                 long posd = (index - 1) * size;
                 brData.BaseStream.Seek(posd, SeekOrigin.Begin);
@@ -247,6 +247,110 @@ namespace Infraestructure.Data
             return listT;
         }
 
+        public bool Delete<T>(int id)
+        {
+            if (id == -1)
+            {
+                return false;
+            }
+
+            using (BinaryWriter tempBWHeader = new BinaryWriter(File.Open($"temp.hd", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
+            {
+                int n;
+                int k;
+                int tempN = 0;
+                //int tempK = 0;
+                using (BinaryReader brHeader = new BinaryReader(HeaderStream))
+                {
+                    if (brHeader.BaseStream.Length == 0)
+                        return false;
+
+                    brHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                    n = brHeader.ReadInt32();
+                    k = brHeader.ReadInt32();
+                }
+                if (n == 1)
+                {
+                    File.Delete(fileName + ".hd");
+                    return false;
+                }
+                //HeaderStream.Close();
+                int tempIterator = 0;
+                for (int i = 0; i < n; i++)
+                {
+                    int index;
+
+                    using (BinaryReader brHeader = new BinaryReader(HeaderStream))
+                    {
+                        long posh = 8 + i * 4;
+                        brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
+                        index = brHeader.ReadInt32();
+
+                        if (index == id && (i == n - 1))
+                        {
+                            tempBWHeader.BaseStream.Seek(4, SeekOrigin.Begin);
+                            tempBWHeader.Write(k);
+                            continue;
+                        }
+                        if (index == id)
+                            continue;
+                        //tempK++;
+                        long posH = 8 + tempIterator * 4;
+                        tempBWHeader.BaseStream.Seek(posH, SeekOrigin.Begin);
+                        tempBWHeader.Write(index);
+
+                        tempBWHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                        tempBWHeader.Write(++tempN);
+
+                        tempBWHeader.Write(index);
+                        tempIterator++;
+                    }
+                }
+                File.Delete(fileName);
+
+            }
+
+            using (BinaryWriter bwHeader = new BinaryWriter(HeaderStream))
+            {
+                int n;
+                int k;
+                int tempN = 0;
+
+                using (BinaryReader tempBRHeader = new BinaryReader(File.Open($"temp.hd", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
+                {
+                    tempBRHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                    n = tempBRHeader.ReadInt32();
+                    k = tempBRHeader.ReadInt32();
+                    for (int i = 0; i < n; i++)
+                    {
+                        int index;
+                        long posh = 8 + i * 4;
+                        tempBRHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
+                        index = tempBRHeader.ReadInt32();
+
+                        long posH = 8 + i * 4;
+                        bwHeader.BaseStream.Seek(posH, SeekOrigin.Begin);
+                        bwHeader.Write(index);
+
+                        bwHeader.BaseStream.Seek(0, SeekOrigin.Begin);
+                        bwHeader.Write(++tempN);
+                        if (i == n - 1)
+                        {
+                            bwHeader.BaseStream.Seek(4, SeekOrigin.Begin);
+                            bwHeader.Write(k);
+                        }
+                        else
+                            bwHeader.Write(index);
+                    }
+                }
+
+            }
+
+            if (File.Exists("temp.hd"))
+                File.Delete("temp.hd");
+            return true;
+        }
+
 
 
         public int Update<T>(T t)
@@ -282,7 +386,7 @@ namespace Infraestructure.Data
 
                     long posh = 8 + (id - 1) * 4;
                     brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
-                    int index = brHeader.ReadInt32();
+                    int index = id;
 
                     long posd = (index - 1) * size;
                     bwData.BaseStream.Seek(posd, SeekOrigin.Begin);
@@ -342,10 +446,6 @@ namespace Infraestructure.Data
             }
         }
 
-        public bool Delete<T>(T t)
-        {
 
-            return false;
-        }
     }
 }

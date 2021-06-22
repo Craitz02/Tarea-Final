@@ -198,6 +198,7 @@
     <Compile Include="Forms\FrmProducto.Designer.cs">
       <DependentUpon>FrmProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Producto.cs" />
     <Compile Include="Mdi.cs">
       <SubType>Form</SubType>
     </Compile>

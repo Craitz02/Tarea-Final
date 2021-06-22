@@ -12,6 +12,7 @@ namespace Infraestructure.Data
 {
     public class ProductRepository : IProductRepository
     {
+        public bool Added = false;
         private RAFContext context;
         private readonly int SIZE = 2791;
         
@@ -27,7 +28,7 @@ namespace Infraestructure.Data
 
         public int Update(Product t)
         {
-            return 0;
+            return context.Update<Product>(t);
         }
 
         public bool Delete(Product t)
@@ -36,12 +37,20 @@ namespace Infraestructure.Data
             {
                 throw new ArgumentException($"Product with Id {t.Id} does not exists.");
             } 
-            return context.Delete(t.Id);
+            return context.Delete<Product>(t.Id);
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return context.GetAll<Product>();
+            if (Added)
+            {
+                return context.GetAll<Product>();
+            }
+            else
+            {
+                return null;
+            }
+            
         }
 
         public IEnumerable<Product> Find(Expression<Func<Product, bool>> where)

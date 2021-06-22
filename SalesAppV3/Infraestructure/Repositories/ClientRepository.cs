@@ -30,7 +30,7 @@ namespace Infraestructure.Data
             {
                 throw new ArgumentException($"Supplier with Id {t.Id} does not exists.");
             }
-            return context.Delete(t.Id);
+            return context.Delete<Product>(t.Id);
         }
 
         public IEnumerable<Client> Find(Expression<Func<Client, bool>> where)

@@ -16,6 +16,8 @@ namespace Presentation.Forms
     {
         public List<Product> Productos { get; set; }
         private ProductRepository Prepo;
+        private bool toUpdate = false;
+        private Product pToUpdate;
 
         public FrmProducto()
         {
@@ -43,6 +45,7 @@ namespace Presentation.Forms
                 string Imagen = TxtImagenUrl.Text;
                 ValidateProduct(Nombre, out int Cantidad, out decimal Precio, Descripcion, Imagen, Marca, Modelo);
 
+
                 Product P = new Product()
                 {
                     Name = Nombre,
@@ -54,17 +57,33 @@ namespace Presentation.Forms
                     Stock = Cantidad,
                 };
 
-                Prepo.Create(P);
-                MessageBox.Show("Producto agregado satisfactoriamente");
+                if (toUpdate)
+                {
+                    pToUpdate.Name = Nombre;
+                    pToUpdate.Description = Descripcion;
+                    pToUpdate.Brand = Marca;
+                    pToUpdate.ImageURL = Imagen;
+                    pToUpdate.Model = Modelo;
+                    pToUpdate.Price = Precio;
+                    pToUpdate.Stock = Cantidad;
+                    Prepo.Update(pToUpdate);
+                    MessageBox.Show("Producto actualizado satisfactoriamente");
+                }
+                else
+                {
+                    Prepo.Create(P);
+                    MessageBox.Show("Producto agregado satisfactoriamente");
+                }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             ClearBox();
             Productos = Prepo.GetAll().ToList();
-            Productos = reloadTable(Productos);
+            reloadTable(Productos);
         }
 
         public void ValidateProduct(string nombre, out int cantidad, out decimal precio, string descripcion, string imagen, string marca, string modelo)
@@ -112,24 +131,74 @@ namespace Presentation.Forms
             TxtImagenUrl.Clear();
         }
 
-        public List<Product> reloadTable(List<Product> prod)
+        public void reloadTable(List<Product> prod)
         {
-            List<Product> temp = new List<Product>();
-            foreach (Product p in prod)
+            
+            if (Prepo.GetAll() == null)
             {
-                if (p == null)
-                {
-                    continue;
-                }
-                else
-                {
-                    temp.Add(p);
-                }
+                return;
             }
-            DgvProductos.DataSource = null;
-            DgvProductos.DataSource = temp;
+            else
+            {
 
-            return temp;
+                prod = Prepo.GetAll().ToList();
+                DgvProductos.DataSource = null;
+                DgvProductos.DataSource = prod;
+            }
+            
+        }
+
+        private void FrmProducto_Load(object sender, EventArgs e)
+        {
+            reloadTable(Productos);
+            Prepo.Added = true;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (DgvProductos.Rows.Count == 0 || DgvProductos.CurrentCell.RowIndex < 0)
+            {
+                MessageBox.Show("Tabla sin datos o fila no seleccionada");
+                return;
+            }
+            Product p = (Product)DgvProductos.CurrentRow.DataBoundItem;
+            Prepo.Delete(p);
+            Productos.Remove(p);
+            if (Productos.Count == 0)
+            {
+                Prepo.Added = false;
+            }
+
+            reloadTable(Productos);
+
+
+
+
+        }
+
+        public void LoadInfo(Product p)
+        {
+            TxtNombre.Text = p.Name;
+            TxtDescripcion.Text = p.Description;
+            TxtMarca.Text = p.Brand;
+            TxtModelo.Text = p.Model;
+            TxtCantidad.Text = p.Stock + "";
+            TxtPrecio.Text = p.Price + "";
+            TxtImagenUrl.Text = p.ImageURL;
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            if (DgvProductos.Rows.Count == 0 || DgvProductos.CurrentCell.RowIndex < 0)
+            {
+                MessageBox.Show("Tabla sin datos o fila no seleccionada");
+                return;
+            }
+            Product p = (Product)DgvProductos.CurrentRow.DataBoundItem;
+            LoadInfo(p);
+            toUpdate = true;
+            pToUpdate = p;
+
         }
     }
 }

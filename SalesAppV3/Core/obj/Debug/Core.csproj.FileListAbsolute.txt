@@ -58,3 +58,21 @@ C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csproj
 C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csproj.CopyComplete
 C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.exe
 C:\Users\Ethan Dávila\Desktop\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.pdb
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Core.exe.config
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Core.exe
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Core.pdb
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csprojAssemblyReference.cache
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.exe
+C:\Users\rodri\OneDrive\Escritorio\Tarea-Final\SalesAppV3\Core\obj\Debug\Core.pdb

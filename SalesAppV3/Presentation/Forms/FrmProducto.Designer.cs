@@ -30,21 +30,21 @@ namespace Presentation.Forms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtDescripcion = new System.Windows.Forms.TextBox();
-            this.TxtMarca = new System.Windows.Forms.TextBox();
-            this.TxtModelo = new System.Windows.Forms.TextBox();
-            this.TxtPrecio = new System.Windows.Forms.TextBox();
-            this.TxtCantidad = new System.Windows.Forms.TextBox();
-            this.TxtImagenUrl = new System.Windows.Forms.TextBox();
             this.BtnSearchImage = new System.Windows.Forms.Button();
+            this.TxtImagenUrl = new System.Windows.Forms.TextBox();
+            this.TxtCantidad = new System.Windows.Forms.TextBox();
+            this.TxtPrecio = new System.Windows.Forms.TextBox();
+            this.TxtModelo = new System.Windows.Forms.TextBox();
+            this.TxtMarca = new System.Windows.Forms.TextBox();
+            this.TxtDescripcion = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.DgvProductos = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnDelete = new System.Windows.Forms.Button();
@@ -61,6 +61,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.BtnSearchImage);
             this.panel1.Controls.Add(this.TxtImagenUrl);
+            this.panel1.Controls.Add(this.BtnAgregar);
             this.panel1.Controls.Add(this.TxtCantidad);
             this.panel1.Controls.Add(this.TxtPrecio);
             this.panel1.Controls.Add(this.TxtModelo);
@@ -76,132 +77,8 @@ namespace Presentation.Forms
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(484, 230);
+            this.panel1.Size = new System.Drawing.Size(484, 257);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Descripción:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Marca:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Modelo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(56, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Precio:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 159);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Cantidad:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 186);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Imagen: ";
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtNombre.Location = new System.Drawing.Point(143, 20);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(291, 20);
-            this.TxtNombre.TabIndex = 7;
-            // 
-            // TxtDescripcion
-            // 
-            this.TxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtDescripcion.Location = new System.Drawing.Point(143, 48);
-            this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(291, 20);
-            this.TxtDescripcion.TabIndex = 8;
-            // 
-            // TxtMarca
-            // 
-            this.TxtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtMarca.Location = new System.Drawing.Point(143, 75);
-            this.TxtMarca.Name = "TxtMarca";
-            this.TxtMarca.Size = new System.Drawing.Size(291, 20);
-            this.TxtMarca.TabIndex = 9;
-            // 
-            // TxtModelo
-            // 
-            this.TxtModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtModelo.Location = new System.Drawing.Point(143, 102);
-            this.TxtModelo.Name = "TxtModelo";
-            this.TxtModelo.Size = new System.Drawing.Size(291, 20);
-            this.TxtModelo.TabIndex = 10;
-            // 
-            // TxtPrecio
-            // 
-            this.TxtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtPrecio.Location = new System.Drawing.Point(143, 129);
-            this.TxtPrecio.Name = "TxtPrecio";
-            this.TxtPrecio.Size = new System.Drawing.Size(291, 20);
-            this.TxtPrecio.TabIndex = 11;
-            // 
-            // TxtCantidad
-            // 
-            this.TxtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtCantidad.Location = new System.Drawing.Point(143, 156);
-            this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(291, 20);
-            this.TxtCantidad.TabIndex = 12;
-            // 
-            // TxtImagenUrl
-            // 
-            this.TxtImagenUrl.Location = new System.Drawing.Point(143, 183);
-            this.TxtImagenUrl.Name = "TxtImagenUrl";
-            this.TxtImagenUrl.Size = new System.Drawing.Size(217, 20);
-            this.TxtImagenUrl.TabIndex = 13;
             // 
             // BtnSearchImage
             // 
@@ -213,6 +90,130 @@ namespace Presentation.Forms
             this.BtnSearchImage.UseVisualStyleBackColor = true;
             this.BtnSearchImage.Click += new System.EventHandler(this.BtnSearchImage_Click);
             // 
+            // TxtImagenUrl
+            // 
+            this.TxtImagenUrl.Location = new System.Drawing.Point(143, 183);
+            this.TxtImagenUrl.Name = "TxtImagenUrl";
+            this.TxtImagenUrl.Size = new System.Drawing.Size(217, 20);
+            this.TxtImagenUrl.TabIndex = 13;
+            // 
+            // TxtCantidad
+            // 
+            this.TxtCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtCantidad.Location = new System.Drawing.Point(143, 156);
+            this.TxtCantidad.Name = "TxtCantidad";
+            this.TxtCantidad.Size = new System.Drawing.Size(291, 20);
+            this.TxtCantidad.TabIndex = 12;
+            // 
+            // TxtPrecio
+            // 
+            this.TxtPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtPrecio.Location = new System.Drawing.Point(143, 129);
+            this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.Size = new System.Drawing.Size(291, 20);
+            this.TxtPrecio.TabIndex = 11;
+            // 
+            // TxtModelo
+            // 
+            this.TxtModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtModelo.Location = new System.Drawing.Point(143, 102);
+            this.TxtModelo.Name = "TxtModelo";
+            this.TxtModelo.Size = new System.Drawing.Size(291, 20);
+            this.TxtModelo.TabIndex = 10;
+            // 
+            // TxtMarca
+            // 
+            this.TxtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtMarca.Location = new System.Drawing.Point(143, 75);
+            this.TxtMarca.Name = "TxtMarca";
+            this.TxtMarca.Size = new System.Drawing.Size(291, 20);
+            this.TxtMarca.TabIndex = 9;
+            // 
+            // TxtDescripcion
+            // 
+            this.TxtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtDescripcion.Location = new System.Drawing.Point(143, 48);
+            this.TxtDescripcion.Name = "TxtDescripcion";
+            this.TxtDescripcion.Size = new System.Drawing.Size(291, 20);
+            this.TxtDescripcion.TabIndex = 8;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtNombre.Location = new System.Drawing.Point(143, 20);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(291, 20);
+            this.TxtNombre.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(56, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Imagen: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(56, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Cantidad:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(56, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Precio:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(56, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Modelo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(56, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Marca:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(56, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Descripción:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(56, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre:";
+            // 
             // DgvProductos
             // 
             this.DgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -220,9 +221,9 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProductos.Location = new System.Drawing.Point(0, 278);
+            this.DgvProductos.Location = new System.Drawing.Point(0, 304);
             this.DgvProductos.Name = "DgvProductos";
-            this.DgvProductos.Size = new System.Drawing.Size(484, 201);
+            this.DgvProductos.Size = new System.Drawing.Size(484, 219);
             this.DgvProductos.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -231,9 +232,8 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.BtnDelete);
             this.flowLayoutPanel1.Controls.Add(this.BtnUpdate);
-            this.flowLayoutPanel1.Controls.Add(this.BtnAgregar);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 239);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 265);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(484, 33);
             this.flowLayoutPanel1.TabIndex = 2;
@@ -246,6 +246,7 @@ namespace Presentation.Forms
             this.BtnDelete.TabIndex = 0;
             this.BtnDelete.Text = "Eliminar";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnUpdate
             // 
@@ -255,14 +256,15 @@ namespace Presentation.Forms
             this.BtnUpdate.TabIndex = 1;
             this.BtnUpdate.Text = "Actualizar";
             this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnAgregar
             // 
-            this.BtnAgregar.Location = new System.Drawing.Point(244, 3);
+            this.BtnAgregar.Location = new System.Drawing.Point(143, 222);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(75, 23);
             this.BtnAgregar.TabIndex = 2;
-            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.Text = "Aceptar";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
@@ -270,12 +272,13 @@ namespace Presentation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 479);
+            this.ClientSize = new System.Drawing.Size(485, 523);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.DgvProductos);
             this.Controls.Add(this.panel1);
             this.Name = "FrmProducto";
             this.Text = "Agregando Producto";
+            this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
