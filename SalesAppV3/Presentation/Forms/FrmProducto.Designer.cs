@@ -77,7 +77,7 @@ namespace Presentation.Forms
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(484, 257);
+            this.panel1.Size = new System.Drawing.Size(486, 257);
             this.panel1.TabIndex = 0;
             // 
             // BtnSearchImage
@@ -94,6 +94,7 @@ namespace Presentation.Forms
             // 
             this.TxtImagenUrl.Location = new System.Drawing.Point(143, 183);
             this.TxtImagenUrl.Name = "TxtImagenUrl";
+            this.TxtImagenUrl.ReadOnly = true;
             this.TxtImagenUrl.Size = new System.Drawing.Size(217, 20);
             this.TxtImagenUrl.TabIndex = 13;
             // 
@@ -113,7 +114,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtCantidad.Location = new System.Drawing.Point(143, 156);
             this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(291, 20);
+            this.TxtCantidad.Size = new System.Drawing.Size(293, 20);
             this.TxtCantidad.TabIndex = 12;
             // 
             // TxtPrecio
@@ -122,7 +123,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtPrecio.Location = new System.Drawing.Point(143, 129);
             this.TxtPrecio.Name = "TxtPrecio";
-            this.TxtPrecio.Size = new System.Drawing.Size(291, 20);
+            this.TxtPrecio.Size = new System.Drawing.Size(293, 20);
             this.TxtPrecio.TabIndex = 11;
             // 
             // TxtModelo
@@ -131,7 +132,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtModelo.Location = new System.Drawing.Point(143, 102);
             this.TxtModelo.Name = "TxtModelo";
-            this.TxtModelo.Size = new System.Drawing.Size(291, 20);
+            this.TxtModelo.Size = new System.Drawing.Size(293, 20);
             this.TxtModelo.TabIndex = 10;
             // 
             // TxtMarca
@@ -140,7 +141,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtMarca.Location = new System.Drawing.Point(143, 75);
             this.TxtMarca.Name = "TxtMarca";
-            this.TxtMarca.Size = new System.Drawing.Size(291, 20);
+            this.TxtMarca.Size = new System.Drawing.Size(293, 20);
             this.TxtMarca.TabIndex = 9;
             // 
             // TxtDescripcion
@@ -149,7 +150,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtDescripcion.Location = new System.Drawing.Point(143, 48);
             this.TxtDescripcion.Name = "TxtDescripcion";
-            this.TxtDescripcion.Size = new System.Drawing.Size(291, 20);
+            this.TxtDescripcion.Size = new System.Drawing.Size(293, 20);
             this.TxtDescripcion.TabIndex = 8;
             // 
             // TxtNombre
@@ -158,7 +159,7 @@ namespace Presentation.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtNombre.Location = new System.Drawing.Point(143, 20);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(291, 20);
+            this.TxtNombre.Size = new System.Drawing.Size(293, 20);
             this.TxtNombre.TabIndex = 7;
             // 
             // label7
@@ -227,12 +228,15 @@ namespace Presentation.Forms
             // DgvProductos
             // 
             this.DgvProductos.AllowUserToOrderColumns = true;
+            this.DgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProductos.Location = new System.Drawing.Point(0, 304);
+            this.DgvProductos.Location = new System.Drawing.Point(0, 297);
             this.DgvProductos.Name = "DgvProductos";
             this.DgvProductos.ReadOnly = true;
-            this.DgvProductos.Size = new System.Drawing.Size(484, 219);
+            this.DgvProductos.Size = new System.Drawing.Size(483, 255);
             this.DgvProductos.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -244,12 +248,12 @@ namespace Presentation.Forms
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 265);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(484, 33);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(486, 33);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(406, 3);
+            this.BtnDelete.Location = new System.Drawing.Point(408, 3);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(75, 23);
             this.BtnDelete.TabIndex = 0;
@@ -259,7 +263,7 @@ namespace Presentation.Forms
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(325, 3);
+            this.BtnUpdate.Location = new System.Drawing.Point(327, 3);
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(75, 23);
             this.BtnUpdate.TabIndex = 1;
@@ -271,12 +275,12 @@ namespace Presentation.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 523);
+            this.ClientSize = new System.Drawing.Size(487, 553);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.DgvProductos);
             this.Controls.Add(this.panel1);
             this.Name = "FrmProducto";
-            this.Text = "Product Control";
+            this.Text = "z";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

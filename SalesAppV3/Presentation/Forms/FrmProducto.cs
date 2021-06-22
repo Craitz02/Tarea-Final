@@ -22,6 +22,7 @@ namespace Presentation.Forms
         public FrmProducto()
         {
             InitializeComponent();
+            LoadComponents();
             Prepo = new ProductRepository();
         }
 
@@ -75,6 +76,9 @@ namespace Presentation.Forms
                     Prepo.Create(P);
                     MessageBox.Show("Producto agregado satisfactoriamente");
                 }
+                ClearBox();
+                Productos = Prepo.GetAll().ToList();
+                reloadTable(Productos);
 
             }
             catch (Exception ex)
@@ -82,9 +86,7 @@ namespace Presentation.Forms
                 MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ClearBox();
-            Productos = Prepo.GetAll().ToList();
-            reloadTable(Productos);
+            
         }
 
         public void ValidateProduct(string nombre, out int cantidad, out decimal precio, string descripcion, string imagen, string marca, string modelo)
@@ -189,5 +191,11 @@ namespace Presentation.Forms
             toUpdate = true;
             pToUpdate = p;
         }
-    }
+
+        private void LoadComponents()
+        {
+            DgvProductos.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            DgvProductos.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvProductos.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
 }

@@ -23,6 +23,7 @@ namespace Presentation.Forms
         public FrmSupplier()
         {
             InitializeComponent();
+            LoadComponents();
             SRepo = new SupplierRepository();
         }
 
@@ -59,15 +60,16 @@ namespace Presentation.Forms
                     SRepo.Create(S);
                     MessageBox.Show("Proveedor agregado satisfactoriamente");
                 }
+                ClearBox();
+                Proveedores = SRepo.GetAll().ToList();
+                reloadTable(Proveedores);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Se produjo un error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ClearBox();
-            Proveedores = SRepo.GetAll().ToList();
-            reloadTable(Proveedores);
+            
         }
 
         public void ValidateSupplier(string Nombre, string Direccion, string Email, string Telefono)
@@ -167,6 +169,12 @@ namespace Presentation.Forms
             TxtDireccion.Text = S.Address;
             TxtEmail.Text = S.Email;
             TxtTelefono.Text = S.Phone;
+        }
+        private void LoadComponents()
+        {
+            DgvProveedores.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            DgvProveedores.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvProveedores.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

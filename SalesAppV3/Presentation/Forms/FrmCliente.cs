@@ -23,6 +23,7 @@ namespace Presentation.Forms
         public FrmCliente()
         {
             InitializeComponent();
+            LoadComponents();
             CRepo = new ClientRepository();
         }
 
@@ -58,15 +59,17 @@ namespace Presentation.Forms
                     CRepo.Create(C);
                     MessageBox.Show("Cliente agregado satisfactoriamente");
                 }
+
+                ClearBox();
+                Clientes = CRepo.GetAll().ToList();
+                reloadTable(Clientes);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            ClearBox();
-            Clientes = CRepo.GetAll().ToList();
-            reloadTable(Clientes);
+            
         }
 
         public void ValidateClient(string Nombre, string Apellidos, string Email, string Telefono)
@@ -167,6 +170,13 @@ namespace Presentation.Forms
             TxtApellidos.Text = C.Lastname;
             TxtEmail.Text = C.Email;
             TxtTelefono.Text = C.Phone;
+        }
+
+        private void LoadComponents()
+        {
+            DgvClientes.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            DgvClientes.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            DgvClientes.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

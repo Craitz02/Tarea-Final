@@ -46,5 +46,10 @@ namespace Presentation
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
