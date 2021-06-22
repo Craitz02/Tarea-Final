@@ -49,7 +49,6 @@
     <Compile Include="Repositories\BinaryReaderExtension.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
-    <Compile Include="Repositories\ProveedorRepository.cs" />
     <Compile Include="Repositories\RAFContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Repositories\SupplierRepository.cs" />

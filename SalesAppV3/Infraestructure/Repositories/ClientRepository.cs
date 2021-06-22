@@ -12,6 +12,7 @@ namespace Infraestructure.Data
     public class ClientRepository : IClientRepository
     {
         private RAFContext context;
+        public bool Added = false;
         private readonly int SIZE = 228;
 
         public ClientRepository()
@@ -40,12 +41,19 @@ namespace Infraestructure.Data
 
         public IEnumerable<Client> GetAll()
         {
-            return context.GetAll<Client>();
+            if (Added)
+            {
+                return context.GetAll<Client>();
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public int Update(Client t)
         {
-            return 0;
+            return context.Update<Client>(t);
         }
     }
 }

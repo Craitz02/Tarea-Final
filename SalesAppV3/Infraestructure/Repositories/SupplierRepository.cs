@@ -13,6 +13,7 @@ namespace Infraestructure.Repositories
     public class SupplierRepository : ISupplierRepository
     {
         private RAFContext context;
+        public bool Added = false;
         private readonly int SIZE = 388;
 
         public SupplierRepository()
@@ -41,12 +42,19 @@ namespace Infraestructure.Repositories
 
         public IEnumerable<Supplier> GetAll()
         {
-            return context.GetAll<Supplier>();
+            if (Added)
+            {
+                return context.GetAll<Supplier>();
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public int Update(Supplier t)
         {
-            return 0;
+            return context.Update<Supplier>(t);
         }
     }
 }

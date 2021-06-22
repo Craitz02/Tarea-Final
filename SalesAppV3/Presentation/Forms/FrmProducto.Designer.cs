@@ -32,6 +32,7 @@ namespace Presentation.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnSearchImage = new System.Windows.Forms.Button();
             this.TxtImagenUrl = new System.Windows.Forms.TextBox();
+            this.BtnAgregar = new System.Windows.Forms.Button();
             this.TxtCantidad = new System.Windows.Forms.TextBox();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.TxtModelo = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@ namespace Presentation.Forms
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnUpdate = new System.Windows.Forms.Button();
-            this.BtnAgregar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -96,6 +96,16 @@ namespace Presentation.Forms
             this.TxtImagenUrl.Name = "TxtImagenUrl";
             this.TxtImagenUrl.Size = new System.Drawing.Size(217, 20);
             this.TxtImagenUrl.TabIndex = 13;
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Location = new System.Drawing.Point(217, 221);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.BtnAgregar.TabIndex = 2;
+            this.BtnAgregar.Text = "Aceptar";
+            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // TxtCantidad
             // 
@@ -216,13 +226,12 @@ namespace Presentation.Forms
             // 
             // DgvProductos
             // 
-            this.DgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvProductos.AllowUserToOrderColumns = true;
             this.DgvProductos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProductos.Location = new System.Drawing.Point(0, 304);
             this.DgvProductos.Name = "DgvProductos";
+            this.DgvProductos.ReadOnly = true;
             this.DgvProductos.Size = new System.Drawing.Size(484, 219);
             this.DgvProductos.TabIndex = 1;
             // 
@@ -258,16 +267,6 @@ namespace Presentation.Forms
             this.BtnUpdate.UseVisualStyleBackColor = true;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.Location = new System.Drawing.Point(143, 222);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.BtnAgregar.TabIndex = 2;
-            this.BtnAgregar.Text = "Aceptar";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,7 +276,7 @@ namespace Presentation.Forms
             this.Controls.Add(this.DgvProductos);
             this.Controls.Add(this.panel1);
             this.Name = "FrmProducto";
-            this.Text = "Agregando Producto";
+            this.Text = "Product Control";
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

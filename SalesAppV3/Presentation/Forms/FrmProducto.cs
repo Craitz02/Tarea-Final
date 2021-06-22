@@ -140,7 +140,6 @@ namespace Presentation.Forms
             }
             else
             {
-
                 prod = Prepo.GetAll().ToList();
                 DgvProductos.DataSource = null;
                 DgvProductos.DataSource = prod;
@@ -150,8 +149,17 @@ namespace Presentation.Forms
 
         private void FrmProducto_Load(object sender, EventArgs e)
         {
-            reloadTable(Productos);
-            Prepo.Added = true;
+            if (Prepo.GetAll() == null)
+            {
+                return;
+            }
+            else
+            {
+                reloadTable(Productos);
+                Prepo.Added = true;
+
+                DgvProductos.DataSource = Prepo.GetAll().ToList();
+            }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -170,10 +178,6 @@ namespace Presentation.Forms
             }
 
             reloadTable(Productos);
-
-
-
-
         }
 
         public void LoadInfo(Product p)
@@ -198,7 +202,6 @@ namespace Presentation.Forms
             LoadInfo(p);
             toUpdate = true;
             pToUpdate = p;
-
         }
     }
 }

@@ -15,6 +15,8 @@ namespace Presentation
     public partial class Mdi : Form
     {
         public List<Product> Productos;
+        public List<Client> Clientes;
+        public List<Supplier> Proveedores;
 
         public Mdi()
         {
@@ -25,6 +27,22 @@ namespace Presentation
         {
             FrmProducto frm = new FrmProducto();
             frm.Productos = Productos;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente frm = new FrmCliente();
+            frm.Clientes = Clientes;
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSupplier frm = new FrmSupplier();
+            frm.Proveedores = Proveedores;
             frm.MdiParent = this;
             frm.Show();
         }
